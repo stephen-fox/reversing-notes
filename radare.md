@@ -174,7 +174,7 @@ var var_4h = 0x4130422c = -1
 ```
 w foo @ 0x0804c03c
 ```
-## Rewrite the value of a registera
+## Rewrite the value of a register
 ```
 dr eax = 0xdeadbeef
 ```
