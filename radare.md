@@ -96,7 +96,7 @@ pxw @ ebp-200
 0x0804c028  0x080490a6 0x080490b6 0x080490c6 0x00000000  ................
 ```
 
-## Dissassemble and print n (10) instructions starting from current address
+## Dissassemble n (10) instructions starting from current address
 ```
 pd 10
 │           ;-- eip:
@@ -112,7 +112,27 @@ pd 10
 │      ┌──< 0x08049256      7514           jne 0x804926c
 ```
 
-## List the address of a function (system) for the specified library (libc)
+## Dissassemble n (10) instructions starting at specified address (0x08049272)
+```
+pd 10 @ 0x08049272
+            ; CALL XREF from main @ 0x8049313
+┌ 63: sym.vuln ();
+│ bp: 2 (vars 2, args 0)
+│ sp: 0 (vars 0, args 0)
+│ rg: 0 (vars 0, args 0)
+│           0x08049272 b    55             push ebp
+│           0x08049273      89e5           mov ebp, esp
+│           0x08049275      53             push ebx
+│           0x08049276      81ecb4000000   sub esp, 0xb4
+│           0x0804927c      e89ffeffff     call sym.__x86.get_pc_thunk.bx
+│           0x08049281      81c37f2d0000   add ebx, 0x2d7f
+│           0x08049287      83ec0c         sub esp, 0xc
+│           0x0804928a      8d8548ffffff   lea eax, dword [var_b8h]
+│           0x08049290      50             push eax
+│           0x08049291      e8aafdffff     call sym.imp.gets
+```
+
+## List the address of a function (system()) for the specified library (libc)
 ```
 dmi libc system
 257   0x00131c30 0xf7e68c30 GLOBAL FUNC   102      svcerr_systemerr
