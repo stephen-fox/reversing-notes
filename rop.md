@@ -13,7 +13,7 @@ A few examples of this technique include:
 segment, and then execute it
 
 ## Introduction to ROP
-"Introduction to return oriented programming"
+"Introduction to return oriented programming (ROP)"
 - By: Code Arcana
 - https://codearcana.com/posts/2013/05/28/introduction-to-return-oriented-programming-rop.html
 
@@ -32,7 +32,7 @@ worth understanding.
 - By: Vincent Dary
 - https://vincentdary.github.io/blog-posts/exploit-writing-tutorial-rop-with-shellcode/index.html
 
-## Helpful ROP tricks and using radare2 to identify ROP gadgets
+## Helpful ROP tricks, plus identifying ROP gadgets with radare2
 "Basic ROP Techniques and Tricks"
 - By: Josiah Pierce
 - https://trustfoundry.net/basic-rop-techniques-and-tricks/
