@@ -19,6 +19,7 @@ region, and then execute it
 ## A very basic ret2reg example
 Note: This is kind of difficult to read because of the screenshots, but is still
 worth understanding.
+
 "Stack Overflow ASLR bypass using ret2reg", sickness
 - https://dl.packetstormsecurity.net/papers/attack/lewt2-aslrbypass.pdf
 
