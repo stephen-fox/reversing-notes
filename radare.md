@@ -96,7 +96,7 @@ pxw @ ebp-200
 0x0804c028  0x080490a6 0x080490b6 0x080490c6 0x00000000  ................
 ```
 
-## Dissassemble and print n (10) instructions
+## Dissassemble and print n (10) instructions starting from current address
 ```
 pd 10
 │           ;-- eip:
