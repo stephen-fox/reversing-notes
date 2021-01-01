@@ -47,6 +47,11 @@ xmm7l = 0x00000000
 x64-32 = 0x00000000
 ```
 
+## Rewrite the value of a register
+```
+dr eax = 0xdeadbeef
+```
+
 ## Show words with references to flags and code at the specified address
 ```
 pxr @ esp
@@ -173,8 +178,4 @@ var var_4h = 0x4130422c = -1
 ## Write a string ('foo') to an address (0x0804c03c)
 ```
 w foo @ 0x0804c03c
-```
-## Rewrite the value of a register
-```
-dr eax = 0xdeadbeef
 ```
