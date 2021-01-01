@@ -2,12 +2,41 @@
 
 ## dr
 ```
-
+eax = 0x00000000
+ebx = 0x00000000
+ecx = 0x00000000
+edx = 0x00000000
+esi = 0x00000000
+edi = 0x00000000
+esp = 0xffda6e30
+ebp = 0x00000000
+eip = 0xf7f920b0
+eflags = 0x00000200
+oeax = 0x0000000b
 ```
 
 ## drt all
 ```
-
+eax = 0x00000000
+ax = 0x00000000
+ah = 0x00000000
+al = 0x00000000
+ebx = 0x00000000
+bx = 0x00000000
+bh = 0x00000000
+bl = 0x00000000
+ecx = 0x00000000
+cx = 0x00000000
+ch = 0x00000000
+cl = 0x00000000
+# Snip.
+xmm5h = 0x00000000
+xmm5l = 0x00000000
+xmm6h = 0x00000000
+xmm6l = 0x00000000
+xmm7h = 0x00000000
+xmm7l = 0x00000000
+x64-32 = 0x00000000
 ```
 
 ## pxr @ esp
@@ -116,3 +145,9 @@ nth paddr        size vaddr       vsize perm name
 var var_b8h = 0x41304178 = -1
 var var_4h = 0x4130422c = -1
 ```
+
+## /am call eax
+Search for instuctions with specified operands.
+
+## /ad esi
+Search for operations on specified register.
