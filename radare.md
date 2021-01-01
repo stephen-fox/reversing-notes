@@ -1,7 +1,8 @@
 # radare2 notes
 
-## dr
+## Get the state of common CPU registers
 ```
+dr
 eax = 0x00000000
 ebx = 0x00000000
 ecx = 0x00000000
@@ -15,8 +16,15 @@ eflags = 0x00000200
 oeax = 0x0000000b
 ```
 
-## drt all
+## Get the state of the specified register (esp)
 ```
+dr esp
+0xffcaf310
+```
+
+## Get the state of all CPU registers
+```
+drt all
 eax = 0x00000000
 ax = 0x00000000
 ah = 0x00000000
@@ -39,8 +47,9 @@ xmm7l = 0x00000000
 x64-32 = 0x00000000
 ```
 
-## pxr @ esp
+## Show words with references to flags and code at the specified address
 ```
+pxr @ esp
 0xffa05b28 0x00000040  @... @esp 64 (.symtab) ascii ('@')
 0xffa05b2c 0x083031b0  .10. ([heap]) heap R W X 'mov byte [ebp*4 + 0xfb], ah' '[heap]'
 0xffa05b30 0x080491ee  .... (/home/kali/Desktop/vuln) (.text) sym.flag program R X 'add ebx, 0x2e12' 'vuln'
@@ -61,8 +70,9 @@ x64-32 = 0x00000000
 0xffa05b6c 0x41414532  2EAA ascii ('2')
 ```
 
-## pxw @ ebp-200
+## Get hexadecimal representation of data starting at address (ebp - 200 bytes)
 ```
+pxw @ ebp-200
 0x0804bf38  0x0000001a 0x0804bf0c 0x0000001c 0x00000004  ................
 0x0804bf48  0x6ffffef5 0x080481ec 0x00000005 0x080482ec  ...o............
 0x0804bf58  0x00000006 0x0804820c 0x0000000a 0x0000008d  ................
@@ -81,8 +91,9 @@ x64-32 = 0x00000000
 0x0804c028  0x080490a6 0x080490b6 0x080490c6 0x00000000  ................
 ```
 
-## pd 10
+## Dissassemble and print n (10) instructions
 ```
+pd 10
 │           ;-- eip:
 │           0x08049235 b    ff75f4         push dword [var_ch]
 │           0x08049238      6a40           push 0x40                   ; '@' ; 64
@@ -96,15 +107,17 @@ x64-32 = 0x00000000
 │      ┌──< 0x08049256      7514           jne 0x804926c
 ```
 
-##  dmi libc system
+## List the address of a function (system) for the specified library (libc)
 ```
+dmi libc system
 257   0x00131c30 0xf7e68c30 GLOBAL FUNC   102      svcerr_systemerr
 661   0x00044620 0xf7d7b620 GLOBAL FUNC   55       __libc_system
 1533  0x00044620 0xf7d7b620 WEAK   FUNC   55       system
 ```
 
-## iS
+## Get information about the current binary's sections
 ```
+iS
 [Sections]
 
 nth paddr        size vaddr       vsize perm name
@@ -140,14 +153,22 @@ nth paddr        size vaddr       vsize perm name
 28  0x0000379e  0x101 0x00000000  0x101 ---- .shstrtab
 ```
 
-## afvd
+## Print the values of the current function's arguments and variables
 ```
+afvd
 var var_b8h = 0x41304178 = -1
 var var_4h = 0x4130422c = -1
 ```
 
-## /am call eax
-Search for instuctions with specified operands.
+## Search for instuctions with specified operands
+```
+/am call eax
+```
+
+## Search for operations on a register
+```
+/ad esi
+```
 
 ## /ad esi
 Search for operations on specified register.
