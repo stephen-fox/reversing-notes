@@ -170,5 +170,11 @@ var var_4h = 0x4130422c = -1
 /ad esi
 ```
 
-## /ad esi
-Search for operations on specified register.
+## Write a string ('foo') to an address (0x0804c03c)
+```
+w foo @ 0x0804c03c
+```
+## Rewrite the value of a registera
+```
+dr eax = 0xdeadbeef
+```
