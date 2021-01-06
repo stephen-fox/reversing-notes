@@ -1,8 +1,8 @@
 # objdump
 
-## vamp
-objdump -d vuln | grep esi
+### Dissassemble a program
 ```
+objdump -d vuln
  80490d2:	5e                   	pop    %esi
  80490f5:	56                   	push   %esi
  8049157:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi
