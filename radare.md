@@ -1,6 +1,6 @@
 # radare2 notes
 
-### Get the state of common CPU registers
+#### Get the state of common CPU registers
 ```
 dr
 eax = 0x00000000
@@ -16,13 +16,13 @@ eflags = 0x00000200
 oeax = 0x0000000b
 ```
 
-### Get the state of the specified register (esp)
+#### Get the state of the specified register (esp)
 ```
 dr esp
 0xffcaf310
 ```
 
-### Get the state of all CPU registers
+#### Get the state of all CPU registers
 ```
 drt all
 eax = 0x00000000
@@ -47,12 +47,12 @@ xmm7l = 0x00000000
 x64-32 = 0x00000000
 ```
 
-### Rewrite the value of a register
+#### Rewrite the value of a register
 ```
 dr eax = 0xdeadbeef
 ```
 
-### Show words with references to flags and code at the specified address
+#### Show words with references to flags and code at the specified address
 ```
 pxr @ esp
 0xffa05b28 0x00000040  @... @esp 64 (.symtab) ascii ('@')
@@ -75,7 +75,7 @@ pxr @ esp
 0xffa05b6c 0x41414532  2EAA ascii ('2')
 ```
 
-### Get hexadecimal representation of data starting at address (esp)
+#### Get hexadecimal representation of data starting at address (esp)
 ```
 pxw @ esp
 0x0804bf38  0x0000001a 0x0804bf0c 0x0000001c 0x00000004  ................
@@ -96,7 +96,7 @@ pxw @ esp
 0x0804c028  0x080490a6 0x080490b6 0x080490c6 0x00000000  ................
 ```
 
-### Dissassemble n (10) instructions starting from current address
+#### Dissassemble n (10) instructions starting from current address
 ```
 pd 10
 │           ;-- eip:
@@ -112,7 +112,7 @@ pd 10
 │      ┌──< 0x08049256      7514           jne 0x804926c
 ```
 
-### Dissassemble n (10) instructions starting at specified address (0x08049272)
+#### Dissassemble n (10) instructions starting at specified address (0x08049272)
 ```
 pd 10 @ 0x08049272
             ; CALL XREF from main @ 0x8049313
@@ -132,7 +132,7 @@ pd 10 @ 0x08049272
 │           0x08049291      e8aafdffff     call sym.imp.gets
 ```
 
-### List the address of a function (system()) for the specified library (libc)
+#### List the address of a function (system()) for the specified library (libc)
 ```
 dmi libc system
 257   0x00131c30 0xf7e68c30 GLOBAL FUNC   102      svcerr_systemerr
@@ -140,7 +140,7 @@ dmi libc system
 1533  0x00044620 0xf7d7b620 WEAK   FUNC   55       system
 ```
 
-### Get information about the current binary's sections
+#### Get information about the current binary's sections
 ```
 iS
 [Sections]
@@ -178,24 +178,24 @@ nth paddr        size vaddr       vsize perm name
 28  0x0000379e  0x101 0x00000000  0x101 ---- .shstrtab
 ```
 
-### Print the values of the current function's arguments and variables
+#### Print the values of the current function's arguments and variables
 ```
 afvd
 var var_b8h = 0x41304178 = -1
 var var_4h = 0x4130422c = -1
 ```
 
-### Search for instuctions with specified operands
+#### Search for instuctions with specified operands
 ```
 /am call eax
 ```
 
-### Search for operations on a register
+#### Search for operations on a register
 ```
 /ad esi
 ```
 
-### Write a string ('foo') to an address (0x0804c03c)
+#### Write a string ('foo') to an address (0x0804c03c)
 ```
 w foo @ 0x0804c03c
 ```
