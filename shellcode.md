@@ -14,10 +14,10 @@ do more[.]" - Page 41
 Essentially think of it as an optional portion of a payload used in an exploit
 to add new functionality to the target software.
 
-#### Metasploit shellcode encoder behavior
+## Metasploit shellcode encoder behavior
 "Analyzing Metasploit Payloads", Niels van Gijzen
 - https://hatching.io/blog/metasploit-payloads2/
 
-#### Analysis of 64-bit Metasploit shellcode
+## Analysis of 64-bit Metasploit shellcode
 "X64 Linux Metasploit execve /bin/sh Shellcode Analysis", epibar052
 - https://epi052.gitlab.io/notes-to-self/blog/2018-08-04-x64-linux-metasploit-execve-bin-sh-shellcode-analysis/
