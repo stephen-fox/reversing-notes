@@ -37,3 +37,11 @@ Compile to binary:
 ```
 nasm shell_32.asm -f bin
 ```
+
+#### Overview of Intel x86 assembly registers and instructions
+"x86 Assembly Guide", Quentin Carbonneaux
+- http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
+
+#### Relative jumps in Intel x86
+"Using SHORT (Two-byte) Relative Jump Instructions", Daniel B. Sedory
+- https://thestarman.pcministry.com/asm/2bytejumps.htm
