@@ -46,6 +46,10 @@ worth understanding.
 "64-bit Linux Return-Oriented Programming", Ben Lynn
 - https://crypto.stanford.edu/~blynn/rop/
 
+#### Stack pivoting, frame faking, and other "fancy" ROP techniques
+"Fancy ROP"
+- https://ctf-wiki.github.io/ctf-wiki/pwn/linux/stackoverflow/fancy-rop/
+
 #### ROP chain with execve in a 64-bit Go application
 "Smashing the Stack Part 2 - Building the ROP Chain", Danny "malwaresec"
 Colmenares
