@@ -1,4 +1,5 @@
-# objdump
+# objdump notes
+Notes about the objdump dissassembly tool.
 
 ## Dissassemble a program
 ```
