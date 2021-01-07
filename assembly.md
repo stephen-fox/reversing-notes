@@ -42,6 +42,17 @@ nasm shell_32.asm -f bin
 "x86 Assembly Guide", Quentin Carbonneaux
 - http://flint.cs.yale.edu/cs421/papers/x86-asm/asm.html
 
+#### `popal` x86 instruction
+"Pop All General-Purpose Registers",
+- https://c9x.me/x86/html/file_module_x86_id_249.html
+
+Observations:
+
+Consumes 36 bytes (9 dwords) from the stack:
+```
+[0: edi] [1: esi] [2: ebp] [3: ?] [4: ebx] [5: edx] [6: ecx] [7: eax] [8: eip]
+```
+
 #### Relative jumps in Intel x86
 "Using SHORT (Two-byte) Relative Jump Instructions", Daniel B. Sedory
 - https://thestarman.pcministry.com/asm/2bytejumps.htm
