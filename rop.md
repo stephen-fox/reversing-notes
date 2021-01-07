@@ -51,3 +51,7 @@ worth understanding.
 Colmenares
 - https://malwaresec.github.io/Building-the-ROP-Chain/
 - https://github.com/MalwareSec/Building-the-ROP-Chain
+
+#### Basic explanations of using ROP to exploit stack-based buffer overflows
+- https://stackoverflow.com/a/56509454 - Peter Cordes
+- https://security.stackexchange.com/a/181246 - Peter Cordes
