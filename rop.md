@@ -50,6 +50,15 @@ worth understanding.
 "Fancy ROP"
 - https://ctf-wiki.github.io/ctf-wiki/pwn/linux/stackoverflow/fancy-rop/
 
+#### Bypassing Data Execution Prevention (DEP) on Windows
+"Exploit Development: Hands Up! Give Us The Stack! This Is a ROPpery!",
+Connor McGarr
+- https://connormcgarr.github.io/ROP/
+
+#### Walkthrough of a ropemporium challenge
+"ROPEmporium: Pivot 32-bit CTF Walkthrough With Radare2", janne808
+- https://radiofreerobotron.net/blog/2017/11/23/ropemporium-pivot-ctf-walkthrough/
+
 #### ROP chain with execve in a 64-bit Go application
 "Smashing the Stack Part 2 - Building the ROP Chain", Danny "malwaresec"
 Colmenares
