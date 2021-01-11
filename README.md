@@ -11,6 +11,7 @@ Topics are broken down into individual files and directories:
 
 - [Assembly notes](assembly.md)
 - [Command Line Interface and shell-isms](cli.md)
+- [Directory traversal attacks](directory-traversal.md)
 - [objdump dissassembler](objdump.md)
 - [radare debugger and dissassembler](radare.md)
 - [Return Oriented Programming (ROP) exploit technique](rop.md)
