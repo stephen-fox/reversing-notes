@@ -59,3 +59,23 @@ payload += p64(0x601258)
 
 This converts any strings to bytes before concatenating them together, thus
 avoiding the type error.
+
+## Finger printing local libc
+Here is some awesome code.
+
+```python
+#!/usr/bin/env python3
+
+from pwn import *
+import sys
+
+if len(sys.argv) == 1:
+    sys.stderr.write("please specify at least one libc function to lookup\n")
+    exit(1)
+
+# TODO: Hardcoded.
+libc=ELF("/lib/x86_64-linux-gnu/libc.so.6")
+
+for arg in sys.argv[1:]:
+    print(arg, hex(libc.symbols[arg])
+```
