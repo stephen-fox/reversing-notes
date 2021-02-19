@@ -12,6 +12,7 @@ Topics are broken down into individual files and directories:
 - [Assembly notes](assembly.md)
 - [Command Line Interface and shell-isms](cli.md)
 - [Directory traversal attacks](directory-traversal.md)
+- [gdb (GNU Debugger](gdb.md)
 - [objdump dissassembler](objdump.md)
 - [pwntools](pwntools.md)
 - [radare debugger and dissassembler](radare.md)
