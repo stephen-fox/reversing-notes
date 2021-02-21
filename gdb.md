@@ -57,6 +57,11 @@ Non-debugging symbols:
 0x0000564d2264c090  printf@plt
 ```
 
+## Calculate offset between symbols
+```sh
+print system - __libc_start_main+247
+```
+
 ## Print a function's address
 ```sh
 print system
