@@ -96,6 +96,13 @@ pxw @ esp
 0x0804c028  0x080490a6 0x080490b6 0x080490c6 0x00000000  ................
 ```
 
+## Print 4 bytes at an address
+```
+px 4 @ ebp+0xc
+- offset -   0 1  2 3  4 5  6 7  8 9  A B  C D  E F  0123456789ABCDEF
+0xffaea508  0dd0 dec0
+```
+
 ## Dissassemble n (10) instructions starting from current address
 ```
 pd 10
@@ -198,4 +205,9 @@ var var_4h = 0x4130422c = -1
 ## Write a string ('foo') to an address (0x0804c03c)
 ```
 w foo @ 0x0804c03c
+```
+
+## Print ROP gadgets
+```
+/R
 ```
