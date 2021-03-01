@@ -18,6 +18,7 @@ Topics are broken down into individual files and directories:
 - [radare debugger and dissassembler](radare.md)
 - [Return Oriented Programming (ROP) exploit technique](rop.md)
 - [Shellcode payloads and analysis](shellcode.md)
+- [Linux system calls](syscalls-linux.md)
 
 ## Intentions
 Please note, this repository is a simple collection of notes. It is intended
