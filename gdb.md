@@ -25,9 +25,16 @@ Symbol "__malloc_hook" is static storage at address 0x7fba7a49db70.
 set variable __malloc_hook  = 0x7fba7a327e50
 ```
 
-## Set value at memory address
+## Set pointer at memory address
 ```sh
-set {int}0x7fba7a49db7000=0xf00f00f00f000
+set {int} 0x7fba7a49db7000 = 0xf00f00f00f000
+# Or provide a pointer by variable name, such as the pointer to 'system()'::
+set {int} 0x7fba7a49db7000 = system
+```
+
+## Write a string to a memory address
+```sh
+set {char [8]} 0x7ffeee19dcf4 = "/bin/sh"
 ```
 
 ## Print 4 bytes at address
