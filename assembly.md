@@ -27,15 +27,38 @@ _start:
         int 0x80
 ```
 
-Compile to ELF32 (Executable and Linkable Format):
-```
-nasm shell_32.asm -f elf32
-ld shell_32.o shell_32 -m elf_i386
+Or a [64-bit example](https://stackoverflow.com/a/42750204) by "int80":
+```asm
+section .data
+file db '/bin/sh',0
+file_arg db 'sh',0
+argv dq file_arg, 0
+
+section .text
+global _start
+_start:
+mov     rax, 59
+mov     rdi, file
+mov     rsi, argv
+mov     rdx, 0
+syscall
 ```
 
-Compile to binary:
+#### Compile to ELF32 (Executable and Linkable Format):
+```sh
+nasm src.asm -f elf32
+ld src.o -m elf_i386
 ```
-nasm shell_32.asm -f bin
+
+#### Compile to ELF64
+```sh
+nasm src.asm -f elf64
+ld src.o -m elf_x86_64
+```
+
+#### Compile to binary:
+```sh
+nasm src.asm -f bin
 ```
 
 ## Overview of Intel x86 assembly registers and instructions
