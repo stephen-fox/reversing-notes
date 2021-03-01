@@ -87,3 +87,16 @@ rbx            0x0                 0
 ```sh
 x/100x $rsp
 ```
+
+## Print memory mappings
+```sh
+info proc mappings
+process 66775
+Mapped address spaces:
+
+          Start Addr           End Addr       Size     Offset objfile
+      0x55cf3fde4000     0x55cf3fde5000     0x1000        0x0 /foo
+# (...)
+      0x7f26b8a66000     0x7f26b8a8b000    0x25000        0x0 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+# (...)
+```
