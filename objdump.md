@@ -23,3 +23,20 @@ objdump -d vuln
  8049389:	5e                   	pop    %esi
  804938d:	8d 76 00             	lea    0x0(%esi),%esi
 ```
+
+## Disassemble raw binary
+https://stackoverflow.com/a/34424194
+```
+objdump -D -Mintel,x86-64 -b binary -m i386 foo.bin
+foo.bin:     file format binary
+
+
+Disassembly of section .data:
+
+00000000 <.data>:
+   0:	ba dc fe 21 43       	mov    edx,0x4321fedc
+   5:	be 69 19 12 28       	mov    esi,0x28121969
+   a:	bf ad de e1 fe       	mov    edi,0xfee1dead
+   f:	b0 a9                	mov    al,0xa9
+  11:	0f 05                	syscall 
+```
