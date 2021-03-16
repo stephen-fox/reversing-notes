@@ -27,7 +27,7 @@ objdump -d vuln
 ## Disassemble raw binary
 https://stackoverflow.com/a/34424194
 ```
-objdump -D -Mintel,x86-64 -b binary -m i386 foo.bin
+objdump -D -M intel,x86-64 -b binary -m i386 foo.bin
 foo.bin:     file format binary
 
 
