@@ -100,3 +100,8 @@ Mapped address spaces:
       0x7f26b8a66000     0x7f26b8a8b000    0x25000        0x0 /usr/lib/x86_64-linux-gnu/libc-2.31.so
 # (...)
 ```
+
+## Set breakpoint at a memory address
+```sh
+b *0xf00f00
+```
