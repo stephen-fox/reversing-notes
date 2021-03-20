@@ -11,8 +11,12 @@ Topics are broken down into individual files and directories:
 
 - [Assembly notes](assembly.md)
 - [Command Line Interface and shell-isms](cli.md)
+- [ELF (Executable and Linkable Format)](elf.md)
+- [Format string vulnerability exploitation](format-strings.md)
 - [Path traversal attacks](path-traversal.md)
 - [gdb (GNU Debugger)](gdb.md)
+- [libc analysis and exploitation](libc.md)
+- [Memory leaking strategies](memory-leaks.md)
 - [objdump dissassembler](objdump.md)
 - [pwntools](pwntools.md)
 - [radare debugger and dissassembler](radare.md)
