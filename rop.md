@@ -68,3 +68,7 @@ Colmenares
 ## Basic explanations of using ROP to exploit stack-based buffer overflows
 - https://stackoverflow.com/a/56509454 - Peter Cordes
 - https://security.stackexchange.com/a/181246 - Peter Cordes
+
+## `one_gadget` execve finder tool
+"one_gadget", david942j
+- https://github.com/david942j/one_gadget
