@@ -1,6 +1,14 @@
 # Assembly (asm) notes
 Various notes about reading and writing assembly (mostly Intel x86[/64]).
 
+## Syntax
+
+#### Brackets
+Brackets indicate pointer de-reference. For example, `mov ebx, dword [esp]`
+means copy what `esp` points to into `ebx`. If the value of `esp` were a valid
+memory pointer, and it pointed to the value `0x04`, then the `ebx` register
+value would become `0x04`.
+
 ## Writing and compiling assembly with `nasm`
 - Writing '/bin/sh' asm: https://security.stackexchange.com/a/191387
 - Compiling to binary: https://stackoverflow.com/a/8482487
