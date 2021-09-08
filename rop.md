@@ -43,11 +43,11 @@ worth understanding.
 "Binary exploitation: ret2libc + unknown libc", Hugo "flawwan"
 - https://tasteofsecurity.com/security/ret2libc-unknown-libc/
 
-## Differences between 32-bit and 64-bit ROP
+## Differences between x86 32-bit and 64-bit ROP
 "Return Oriented Programming - Part2", Adwaith "adwait1-G" Gautham
 - https://www.pwnthebox.net/reverse/engineering/and/binary/exploitation/series/2019/03/30/return-oriented-programming-part2.html
 
-## Deep dive into ret2libc on 64-bit systems
+## Deep dive into ret2libc on x86 64-bit systems
 "64-bit Linux Return-Oriented Programming", Ben Lynn
 - https://crypto.stanford.edu/~blynn/rop/
 
@@ -64,7 +64,7 @@ Connor McGarr
 "ROPEmporium: Pivot 32-bit CTF Walkthrough With Radare2", janne808
 - https://radiofreerobotron.net/blog/2017/11/23/ropemporium-pivot-ctf-walkthrough/
 
-## ROP chain with execve in a 64-bit Go application
+## ROP chain with execve in a x86 64-bit Go application
 "Smashing the Stack Part 2 - Building the ROP Chain", Danny "malwaresec"
 Colmenares
 - https://malwaresec.github.io/Building-the-ROP-Chain/
