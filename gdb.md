@@ -1,5 +1,15 @@
 # gdb notes
 
+## Step over a single CPU instruction
+```sh
+si
+```
+
+## Step over n CPU instructions
+```sh
+si 2
+```
+
 ## Print all variables
 ```sh
 info variables
@@ -104,4 +114,9 @@ Mapped address spaces:
 ## Set breakpoint at a memory address
 ```sh
 b *0xf00f00
+```
+
+## Follow child processes
+```sh
+set follow-fork-mode child
 ```
