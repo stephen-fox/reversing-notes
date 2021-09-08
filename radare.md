@@ -211,3 +211,13 @@ w foo @ 0x0804c03c
 ```
 /R
 ```
+
+## List `flag` categories
+```
+fs
+```
+
+## Select a `flag` category
+```
+fs strings
+```
