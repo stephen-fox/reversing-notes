@@ -16,6 +16,11 @@ region, and then execute it
 "Introduction to return oriented programming (ROP)", Code Arcana
 - https://codearcana.com/posts/2013/05/28/introduction-to-return-oriented-programming-rop.html
 
+## Detailed history and exploration of ROP
+"Return-Oriented Programming: Systems, Languages, and Applications" - Ryan
+Roemer, Erik Buchanan, Hovav Shacham, Stefan Savage
+- https://hovav.net/ucsd/dist/rop.pdf
+
 ## A very basic ret2reg example
 Note: This is kind of difficult to read because of the screenshots, but is still
 worth understanding.
