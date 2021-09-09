@@ -18,10 +18,12 @@ Topics are broken down into individual files and directories:
 - [libc analysis and exploitation](libc.md)
 - [Memory leaking strategies](memory-leaks.md)
 - [objdump dissassembler](objdump.md)
+- [Operating system tricks](os-tricks.md)
 - [pwntools](pwntools.md)
 - [radare debugger and dissassembler](radare.md)
 - [Return Oriented Programming (ROP) exploit technique](rop.md)
 - [Shellcode payloads and analysis](shellcode.md)
+- [Signal Return Oriented Programming (SROP) exploit technique](srop.md)
 - [Linux system calls](syscalls-linux.md)
 
 ## Intentions
