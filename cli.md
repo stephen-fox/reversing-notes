@@ -23,3 +23,16 @@ nc -kl -p 4000 <&"${COPROC[0]}" >&"${COPROC[1]}"
 # https://stackoverflow.com/a/17030976
 printf "%0.sA" {1..10}
 ```
+
+## Making '/bin/sh' reverse shell more usable
+```sh
+# Note these commands are executed in the reverse shell.
+script /dev/null
+# Note: There are probably alternatives to python.
+python -c 'import pty;pty.spawn("/bin/bash");'
+# Press Ctrl+Z.
+stty raw -echo
+fg
+# Press enter a few times.
+# Now you can execute 'bash -i' or other things.
+```
