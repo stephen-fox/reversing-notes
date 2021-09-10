@@ -35,4 +35,5 @@ stty raw -echo
 fg
 # Press enter a few times.
 # Now you can execute 'bash -i' or other things.
+# Setting the 'XTERM=xterm' env. can be helpful for 'top' and other things too.
 ```
