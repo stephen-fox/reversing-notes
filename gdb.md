@@ -8,6 +8,7 @@ r
 # Or run with arguments.
 r arg1 arg2 argN
 ```
+
 ## Set maximum number of lines per command
 ```sh
 set listsize 200
