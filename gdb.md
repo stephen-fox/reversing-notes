@@ -1,5 +1,38 @@
 # gdb notes
 
+## Debug a not-yet-started program
+```sh
+gdb path-to-program
+# At the gdb prompt:
+r
+# Or run with arguments.
+r arg1 arg2 argN
+```
+## Set maximum number of lines per command
+```sh
+set listsize 200
+```
+
+## Print out source code
+```sh
+list
+```
+
+## Add breakpoint for source file at line number
+```sh
+b main.c:22
+```
+
+## Delete a breakpoint by its number
+```sh
+delete 1
+```
+
+## List breakpoints
+```sh
+info breakpoints
+```
+
 ## Step over a single CPU instruction
 ```sh
 si
