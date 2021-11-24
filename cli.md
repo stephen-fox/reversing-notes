@@ -37,3 +37,26 @@ fg
 # Now you can execute 'bash -i' or other things.
 # Setting the 'XTERM=xterm' env. can be helpful for 'top' and other things too.
 ```
+
+## Overriding Bash builtins with environment variables
+
+```sh
+# Note: "export" does not like this syntax; you need to find another way to
+# set the environment variable through a parent process.
+# The following example overrides "echo" to call "/bin/echo" with a prefix:
+BASH_FUNC_echo%%='() { /bin/echo "w00t $@"; }'
+```
+
+## Execute a program each time a Bash prompt is written
+
+```sh
+export PROMPT_COMMAND="echo foo"
+```
+
+## Source / execute a shell script when a new Bash shell is started
+
+```sh
+# This example executes "/path/to/my/script.sh" when a new Bash shell starts.
+export BASH_ENV=/path/to/my/script.sh
+bash
+```
