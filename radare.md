@@ -1,5 +1,13 @@
 # radare2 notes
 
+## Disassemble raw executable data in non-ELF / sane file format
+
+```sh
+# Note: I am not sure where the canonical list of values for "asm.arch"
+# are defined. The "-h" argument specifies a couple.
+radare2 -a x86 -b 64 -AAA raw-exectuable-file
+```
+
 ## Get the state of common CPU registers
 ```
 dr
