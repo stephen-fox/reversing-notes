@@ -60,3 +60,15 @@ export PROMPT_COMMAND="echo foo"
 export BASH_ENV=/path/to/my/script.sh
 bash
 ```
+
+## Shell command injection without spaces
+"Command injection without spaces", fyoorer
+- https://www.betterhacker.com/2016/10/command-injection-without-spaces.html
+
+```sh
+# Bash:
+{echo,foo.bar}
+# Other shells:
+args=$'\x20/etc/passwd'
+cat$args
+```
