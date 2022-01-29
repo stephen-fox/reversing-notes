@@ -154,3 +154,8 @@ b *0xf00f00
 ```sh
 set follow-fork-mode child
 ```
+
+## Enable ASLR
+```sh
+set disable-randomization off
+```
