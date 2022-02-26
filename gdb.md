@@ -159,3 +159,15 @@ set follow-fork-mode child
 ```sh
 set disable-randomization off
 ```
+
+## Disassemble stuff
+```sh
+# Disassemble a function:
+disassemble main
+# Disassemble starting at an address:
+disassemble 0x00005555555556ed
+# Disassemble x bytes of instructions:
+disassemble main,+8
+# Disassemble between two points:
+disassemble main+8,main+16
+```
