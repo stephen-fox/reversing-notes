@@ -175,3 +175,15 @@ disassemble /m main
 # Disassemble relative to current instruction:
 disassemble $pc,+8
 ```
+
+## Load source files
+Note: This gdb command works for any executable / library, but getting the
+sources for certain things (like glibc) can be a bit of a pain.
+kaylum's post discusses how to obtain glibc sources and then point gdb
+at them here: https://stackoverflow.com/a/29956038
+
+```sh
+# Note: This is not recursive. gdb only searches the directory for source files.
+# It does not search subdirectories.
+dir /path/to/directory/with/source/files
+```
