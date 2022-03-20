@@ -72,7 +72,7 @@ set variable __malloc_hook  = 0x7fba7a327e50
 ## Set pointer at memory address
 ```sh
 set {int} 0x7fba7a49db7000 = 0xf00f00f00f000
-# Or provide a pointer by variable name, such as the pointer to 'system()'::
+# Or provide a pointer by variable name, such as the pointer to 'system()':
 set {int} 0x7fba7a49db7000 = system
 ```
 
