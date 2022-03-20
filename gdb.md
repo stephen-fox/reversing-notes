@@ -170,4 +170,8 @@ disassemble 0x00005555555556ed
 disassemble main,+8
 # Disassemble between two points:
 disassemble main+8,main+16
+# Disassemble a function, with inline source code:
+disassemble /m main
+# Disassemble relative to current instruction:
+disassemble $pc,+8
 ```
