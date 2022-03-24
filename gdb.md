@@ -187,3 +187,9 @@ at them here: https://stackoverflow.com/a/29956038
 # It does not search subdirectories.
 dir /path/to/directory/with/source/files
 ```
+
+## Setting a watch on a CPU register
+```sh
+# Note: This will slow the program down quite a bit.
+watch $rsp == 0x7fffffffe930
+```
