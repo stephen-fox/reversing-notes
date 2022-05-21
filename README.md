@@ -19,6 +19,7 @@ Topics are broken down into individual files and directories:
 - [Memory leaking strategies](memory-leaks.md)
 - [objdump dissassembler](objdump.md)
 - [Operating system tricks](os-tricks.md)
+- [otool MachO file object disassembler](otool.md)
 - [pwntools](pwntools.md)
 - [radare debugger and dissassembler](radare.md)
 - [Return Oriented Programming (ROP) exploit technique](rop.md)
