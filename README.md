@@ -13,19 +13,21 @@ Topics are broken down into individual files and directories:
 - [Command Line Interface and shell-isms](cli.md)
 - [ELF (Executable and Linkable Format)](elf.md)
 - [Format string vulnerability exploitation](format-strings.md)
-- [Path traversal attacks](path-traversal.md)
 - [gdb (GNU Debugger)](gdb.md)
 - [libc analysis and exploitation](libc.md)
 - [Memory leaking strategies](memory-leaks.md)
 - [objdump dissassembler](objdump.md)
 - [Operating system tricks](os-tricks.md)
 - [otool MachO file object disassembler](otool.md)
+- [Path traversal attacks](path-traversal.md)
 - [pwntools](pwntools.md)
 - [radare debugger and dissassembler](radare.md)
+- [rizin (fork of radare)](rizin.md)
 - [Return Oriented Programming (ROP) exploit technique](rop.md)
 - [Shellcode payloads and analysis](shellcode.md)
 - [Signal Return Oriented Programming (SROP) exploit technique](srop.md)
 - [Linux system calls](syscalls-linux.md)
+- [x86 architecture](x86-architecture.md)
 
 ## Intentions
 Please note, this repository is a simple collection of notes. It is intended
