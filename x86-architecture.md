@@ -4,22 +4,29 @@ Notes about x86 CPU architecture and design.
 
 ## Addressing mode terminology
 
+This write up by Sivarama P. Dandamudi provides an excellent overview of
+x86 addressing:
+
+- https://people.scs.carleton.ca/~sivarama/asm_book_web/Student_copies/ch5_addrmodes.pdf
+
 The following example is based on this stackoverflow question and answer by
 Future Gadget and Peter Cordes:
 
 - https://stackoverflow.com/questions/52564064/difference-betwen-base-and-displacement
 
 ```asm
-;                         + offset (here, the result of math in brackets)
-;                         |
-;                  |-------------|
-imul eax,DWORD PTR [esi+ebx*4-0x4]
-;                   |   |---| |
-;                   |     |   + displacement
-;                   |     |
-;                   |     + index (here, "scaled index")
-;                   |
-;                   + base index (optional)
+;                          + offset (i.e., the result of math in brackets)
+;                          |
+;                   |-------------|
+imul eax, DWORD PTR [esi+ebx*4-0x4]
+;                    |   |   | |
+;                    |   |   | + displacement (optional)
+;                    |   |   |
+;                    |   |   + scale (optional)
+;                    |   |
+;                    |   + index (here, "scaled index")
+;                    |
+;                    + base (optional)
 ;
 ; What actually happens here:
 ;
