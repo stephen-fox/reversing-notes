@@ -25,3 +25,14 @@ e search.in=dbg.maps.rw
 ```
 /x 2e6b792cca055bf6de539d17a5c67dcb75d360ea
 ```
+
+#### Managing flag spaces
+
+```
+# List flagspaces:
+fsl
+# Select a flagspace:
+fs functions
+# List flags in currently-selected flagspaces:
+fsl
+```
