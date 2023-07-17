@@ -36,3 +36,27 @@ fs functions
 # List flags in currently-selected flagspaces:
 fl
 ```
+
+## Show executable information (e.g., security mitigations)
+
+```
+iI
+```
+
+## Show executable segments
+
+```
+iSS
+# Alternatively, show segment for current seek:
+iSS.
+```
+
+## Show executable sections
+
+```
+iS
+# Alternatively, show section for current seek:
+iS.
+# Show ASCII art of section ranges:
+iS=
+```
