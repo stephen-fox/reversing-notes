@@ -34,5 +34,5 @@ fsl
 # Select a flagspace:
 fs functions
 # List flags in currently-selected flagspaces:
-fsl
+fl
 ```
