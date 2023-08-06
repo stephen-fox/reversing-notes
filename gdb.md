@@ -193,3 +193,10 @@ dir /path/to/directory/with/source/files
 # Note: This will slow the program down quite a bit.
 watch $rsp == 0x7fffffffe930
 ```
+
+## Look up an address's symbol
+
+```sh
+info sym 0xf7df7e46
+__libc_start_main + 262 in section .text of /lib32/libc.so.
+```
