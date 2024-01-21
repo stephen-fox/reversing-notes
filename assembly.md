@@ -56,6 +56,36 @@ mov     rdx, 0
 syscall
 ```
 
+#### Compiling for 32-bit x86 on 64-bit system
+
+Use the `[BITS 32]` directive.
+
+An example from https://stackoverflow.com/a/68592540:
+
+```asm
+; Call to sys_chmod
+; eax = 15 (0xf)
+; ebx = filepath "/tmp/before"
+; ecx = mode: 0777 (0x1ff)
+
+[BITS 32]
+xor eax, eax
+mov al, 0xf
+
+xor ebx, ebx
+push ebx
+push dword 0x65726f66
+push dword 0x65622f70
+push dword 0x6d742f2f
+lea ebx, [esp]
+
+mov cx, 0x1ff
+
+int 0x80
+
+nop
+```
+
 #### Compile to ELF32 (Executable and Linkable Format):
 
 ```sh
