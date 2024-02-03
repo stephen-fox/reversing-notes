@@ -230,3 +230,9 @@ watch $rsp == 0x7fffffffe930
 info sym 0xf7df7e46
 __libc_start_main + 262 in section .text of /lib32/libc.so.
 ```
+
+## Get memory in 64-bit chunks
+
+```sh
+x/1gx $rsp
+```
