@@ -92,6 +92,7 @@ set {int} 0x7fba7a49db7000 = system
 ## Write a string to a memory address
 
 ```sh
+# Note: "char [8]" refers to the string length *including* the null terminator.
 set {char [8]} 0x7ffeee19dcf4 = "/bin/sh"
 ```
 
