@@ -24,18 +24,20 @@ section .data
 str: db "/bin/sh", 0x00
 
 section .text
-        global _start
+
+global _start
 
 _start: 
-        xor eax, eax
-        xor ebx, ebx
-        xor ecx, ecx
-        xor edx, edx
-        mov eax, 11
-        mov ebx, str
-        mov ecx, 0
-        mov edx, 0
-        int 0x80
+[BITS 64]
+xor eax, eax
+xor ebx, ebx
+xor ecx, ecx
+xor edx, edx
+mov eax, 11
+mov ebx, str
+mov ecx, 0
+mov edx, 0
+int 0x80
 ```
 
 Or a [64-bit example](https://stackoverflow.com/a/42750204) by "int80":
@@ -47,8 +49,11 @@ file_arg db 'sh',0
 argv dq file_arg, 0
 
 section .text
+
 global _start
+
 _start:
+[BITS 64]
 mov     rax, 59
 mov     rdi, file
 mov     rsi, argv
@@ -87,6 +92,10 @@ nop
 ```
 
 #### Compile to ELF32 (Executable and Linkable Format):
+
+Note: If nasm complains about an invalid instruction (like: "instruction
+not supported in 16-bit mode"), try specifying `[BITS n]` prior to defining
+any instructions. Sometimes nasm needs to be explicitly told the CPU's bits.
 
 ```sh
 nasm src.asm -f elf32
