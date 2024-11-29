@@ -52,3 +52,28 @@ and esp, 0xfffffff0
 `eax` (or `rax` on 64-bit) is used to store the return value.
 
 - https://stackoverflow.com/questions/55773868/returning-a-value-in-x86-assembly-language
+
+## Jumps
+
+Stackoverflow user zx485 wrote this super helpful lookup table for x86 jumps
+here: https://stackoverflow.com/a/53452319
+
+```
+Mnemonic        Condition tested       Description
+jo              OF = 1                 overflow
+jno             OF = 0                 not overflow
+jc, jb, jnae    CF = 1                 carry / below / not above nor equal
+jnc, jae, jnb   CF = 0                 not carry / above or equal / not below
+je, jz          ZF = 1                 equal / zero
+jne, jnz        ZF = 0                 not equal / not zero
+jbe, jna        CF or ZF = 1           below or equal / not above
+ja, jnbe        CF or ZF = 0           above / not below or equal
+js              SF = 1                 sign
+jns             SF = 0                 not sign
+jp, jpe         PF = 1                 parity / parity even
+jnp, jpo        PF = 0                 not parity / parity odd
+jl, jnge        SF xor OF = 1          less / not greater nor equal
+jge, jnl        SF xor OF = 0          greater or equal / not less
+jle, jng        (SF xor OF) or ZF = 1  less or equal / not greater
+jg, jnle        (SF xor OF) or ZF = 0  greater / not less nor equal
+```
