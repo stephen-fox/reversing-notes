@@ -1,7 +1,9 @@
 # General command line / shell notes
+
 Various notes on helpful command line and shell-isms.
 
 ## Reading a file into a program and keeping stdin open
+
 Helpful when working with an exploitable program that reads from stdin.
 
 ```sh
@@ -10,6 +12,7 @@ cat shellcode.hex - | ./vulnerable_program
 ```
 
 ## Hooking a program's std file descriptors up to another program in Bash
+
 ```sh
 # https://stackoverflow.com/a/36327396
 #!/bin/bash
@@ -19,12 +22,14 @@ nc -kl -p 4000 <&"${COPROC[0]}" >&"${COPROC[1]}"
 ```
 
 ## Printing a character n times
+
 ```sh
 # https://stackoverflow.com/a/17030976
 printf "%0.sA" {1..10}
 ```
 
 ## Making '/bin/sh' reverse shell more usable
+
 ```sh
 # Note these commands are executed in the reverse shell.
 script /dev/null
@@ -62,6 +67,7 @@ bash
 ```
 
 ## Shell command injection without spaces
+
 "Command injection without spaces", fyoorer
 - https://www.betterhacker.com/2016/10/command-injection-without-spaces.html
 
