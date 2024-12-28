@@ -24,6 +24,10 @@ nc -kl -p 4000 <&"${COPROC[0]}" >&"${COPROC[1]}"
 ## Printing a character n times
 
 ```sh
+# Pretty portable:
+head -c 50 < /dev/zero | tr '\0' 'A'
+
+# Less portable:
 # https://stackoverflow.com/a/17030976
 printf "%0.sA" {1..10}
 ```
