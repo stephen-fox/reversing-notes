@@ -10,6 +10,14 @@ r
 r arg1 arg2 argN
 ```
 
+## Execute only one instruction and break for not-started program
+
+```sh
+gdb path-to-program
+# At the gdb prompt:
+starti
+```
+
 ## Set maximum number of lines per command
 
 ```sh
@@ -38,6 +46,12 @@ delete 1
 
 ```sh
 info breakpoints
+```
+
+## Disassemble n CPU instructions
+
+```sh
+x/10i $pc
 ```
 
 ## Step over a single CPU instruction
