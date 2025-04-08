@@ -1,15 +1,18 @@
 # pwntools notes
+
 Python is the best.
 
 See https://docs.pwntools.com/en/latest/intro.html#tutorials for more.
 
 ## Python setup
+
 ```sh
 sudo apt install -y python3-venv
 sudo apt install python3-pip
 ```
 
 ## Project setup
+
 ```sh
 # Note: Be careful about conflicting names (i.e., calling the project 'pwn' will
 # conflict with the pwntools 'pwn' namespace).
@@ -23,6 +26,7 @@ vi foo.py
 ```
 
 ## Python file example
+
 ```python
 #!/usr/bin/env python3
 
@@ -32,6 +36,7 @@ from pwn import *
 ## Correcting Python 2 assumptions
 
 ### Strings versus bytes
+
 Many pwntools examples assume Python 2 (because it is the best). As such, you
 will see code like the following:
 
@@ -61,6 +66,7 @@ This converts any strings to bytes before concatenating them together, thus
 avoiding the type error.
 
 ## Finger printing local libc
+
 Here is some awesome code.
 
 ```python
