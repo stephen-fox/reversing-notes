@@ -12,6 +12,7 @@ closely related to reversing, and could be used to assist in analysis efforts.
 Topics are broken down into individual files and directories:
 
 - [Assembly notes](assembly.md)
+- [Convert C datatypes to Golang types](c-to-go.md)
 - [Command Line Interface and shell-isms](cli.md)
 - [ELF (Executable and Linkable Format)](elf.md)
 - [Format string vulnerability exploitation](format-strings.md)
